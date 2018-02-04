@@ -1,0 +1,1576 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Reportes</h2>
+
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<%= url_for :controller => 'user', :action => 'index' %>">Inicio</a>
+            </li>
+            <li class="active">
+                <strong><a>Reportes</a></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+
+<div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="order_id">ID de contrato</label>
+                <input type="text" id="order_id" name="order_id" value="" placeholder="ID de contrato" class="form-control">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="date_added">Fecha Agregada</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input id="date_added" type="text" class="form-control" value="03/04/2014">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="date_modified">Fecha modificada</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input id="date_modified" type="text" class="form-control" value="03/06/2014">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <hr>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="status">Estado</label>
+                <select class="form-control table-filter" >
+                    <option value="">Todas</option>
+                    <option>Ventas Finalizadas</option>
+                    <option>Ventas Rechazadas</option>
+                    <option>Ventas en Proceso</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="status">Tipo de Usuario</label>
+                <select class="form-control table-filter" >
+                    <option value="">Todas</option>
+                    <option>Cliente</option>
+                    <option>CorredorA</option>
+                    <option>CorredorB</option>
+                    <option>Auditor</option>
+                    <option>Vendedor Senior</option>
+                    <option>Administrador del sistema</option>
+                    <option>Ejecutivo</option>
+                    <option>Automotora</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label" for="status">Tipo de Producto</label>
+                <select class="form-control table-filter" >
+                    <option value="">Todas</option>
+                    <option>Automotriz</option>
+                    <option>Viaje</option>
+                    <option>RCP</option>
+                    <option>Hogar</option>
+                    <option>SOAP</option>
+                    <option>Vida</option>
+                    <option>Motor</option>
+                    <option>Condominio</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <p>Historial de ventas</p>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                <table class="footable table table-striped table-bordered table-hover saleshistory">
+                    <thead>
+                    <tr>
+                        <th>ID de contrato</th>
+                        <th>Tipo de Usuario</th>
+                        <th>Precio</th>
+                        <th>Fecha Agregada</th>
+                        <th>Fecha modificada</th>
+                        <th>Tipo de Producto</th>
+                        <th data-hide="all" >Cuotas de Producto</th>
+                        <th>Empresa</th>
+                        <th>Nombres de Cliente</th>
+                        <th data-hide="all">Rut de Cliente</th>
+                        <th data-hide="all">Correo de Cliente</th>
+                        <th data-hide="all">Teléfono de Cliente</th>
+                        <th>Estatus</th>
+                        <th>Nombres de Usuario</th>
+                        <th data-hide="all">Rut de Usuario</th>
+                        <th data-hide="all">Correo de Usuario</th>
+                        <th data-hide="all">Teléfono de Usuario</th>
+                        <th class="text-right"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            321
+                        </td>
+                        <td>
+                            Automotora
+                        </td>
+                        <td>
+                            $500.00
+                        </td>
+                        <td>
+                            03/04/2015
+                        </td>
+                        <td>
+                            03/05/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>3 UF</td>
+                        <td>Liberty</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            324
+                        </td>
+                        <td>
+                            Automotora
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Automotriz
+                        </td>
+                        <td>5 UF</td>
+                        <td>Liberty</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            224
+                        </td>
+                        <td>
+                            CorredorA
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            Automotriz
+                        </td>
+                        <td>5 UF</td>
+                        <td>BCI Insurance</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            327
+                        </td>
+                        <td>
+                            CorredorA
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>1 UF</td>
+                        <td>BCI Insurance</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            642
+                        </td>
+                        <td>
+                            CorredorB
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            Viaje
+                        </td>
+                        <td>1 UF</td>
+                        <td>BCI Insurance</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            435
+                        </td>
+                        <td>
+                            CorredorB
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            Viaje
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            329
+                        </td>
+                        <td>
+                            CorredorB
+                        </td>
+                        <td>
+                            $500.00
+                        </td>
+                        <td>
+                            03/04/2015
+                        </td>
+                        <td>
+                            03/05/2015
+                        </td>
+                        <td>
+                            Viaje
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            108
+                        </td>
+                        <td>
+                            Ejecutivo
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Viaje
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            383
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            RCP
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-danger">Ventas Rechazadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            632
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            RCP
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Ricardo Oliveros</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            621
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            RCP
+                        </td>
+                        <td>1 UF</td>
+                        <td>HDI Seguros</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            115
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            Hogar
+                        </td>
+                        <td>1 UF</td>
+                        <td>Liberty</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            124
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Hogar
+                        </td>
+                        <td>7 UF</td>
+                        <td>Liberty</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-warning">Ventas Rechazadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            219
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            Hogar
+                        </td>
+                        <td>7 UF</td>
+                        <td>Liberty</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            501
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            Vida
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            119
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            Vida
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            155
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            Vida
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            680
+                        </td>
+                        <td>
+                            Auditor
+                        </td>
+                        <td>
+                            $500.00
+                        </td>
+                        <td>
+                            03/04/2015
+                        </td>
+                        <td>
+                            03/05/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            595
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            775
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            768
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            522
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>7 UF</td>
+                        <td>Seguros SURA</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            865
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>12 UF</td>
+                        <td>Zenit Seguros</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            566
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Motor
+                        </td>
+                        <td>12 UF</td>
+                        <td>Zenit Seguros</td>
+                        <td>Arsenio Vargas</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            590
+                        </td>
+                        <td>
+                            Vendedor Senior
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Zenit Seguros</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            850
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Zenit Seguros</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            855
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Zenit Seguros</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1053
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Liberty</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1128
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $500.00
+                        </td>
+                        <td>
+                            03/04/2015
+                        </td>
+                        <td>
+                            03/05/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Liberty</td>
+                        <td>Teresa Magna</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1324
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $320.00
+                        </td>
+                        <td>
+                            12/04/2015
+                        </td>
+                        <td>
+                            21/07/2015
+                        </td>
+                        <td>
+                            Condominio
+                        </td>
+                        <td>12 UF</td>
+                        <td>Liberty</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1230
+                        </td>
+                        <td>
+                            Administrador del sistema
+                        </td>
+                        <td>
+                            $2770.00
+                        </td>
+                        <td>
+                            06/07/2015
+                        </td>
+                        <td>
+                            04/08/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>12 UF</td>
+                        <td>Liberty</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1253
+                        </td>
+                        <td>
+                            Ejecutivo
+                        </td>
+                        <td>
+                            $8560.00
+                        </td>
+                        <td>
+                            01/12/2015
+                        </td>
+                        <td>
+                            05/12/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>12 UF</td>
+                        <td>Liberty</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1456
+                        </td>
+                        <td>
+                            Ejecutivo
+                        </td>
+                        <td>
+                            $6843.00
+                        </td>
+                        <td>
+                            10/04/2015
+                        </td>
+                        <td>
+                            13/07/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>10 UF</td>
+                        <td>Liberty</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-success">Ventas Finalizadas</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1536
+                        </td>
+                        <td>
+                            Ejecutivo
+                        </td>
+                        <td>
+                            $750.00
+                        </td>
+                        <td>
+                            04/04/2015
+                        </td>
+                        <td>
+                            14/05/2015
+                        </td>
+                        <td>
+                            SOAP
+                        </td>
+                        <td>10 UF</td>
+                        <td>Mapre</td>
+                        <td>Raúl Matus</td>
+                        <td>2,819,769-1</td>
+                        <td>adriantapia@espacioseguros.cl</td>
+                        <td>(2) 5898700</td>
+                        <td>
+                            <span class="label label-primary">Ventas en Proceso</span>
+                        </td>
+                        <td>Adrian Tapia Silva</td>
+                        <td>5,264,587-5</td>
+                        <td>espacio@seguro.cl</td>
+                        <td>(2) 8519175</td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">View</button>
+                                <button class="btn-white btn btn-xs">Edit</button>
+                                <button class="btn-white btn btn-xs">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td >ID de contrato</td>
+                        <td>Tipo de Usuario</td>
+                        <td>Precio</td>
+                        <td>Fecha Agregada</td>
+                        <td>Fecha modificada</td>
+                        <td>Tipo de Producto</td>
+                        <td data-hide="all" >Cuotas de Producto</td>
+                        <td>Empresa</td>
+                        <td>Nombres de Cliente</td>
+                        <td data-hide="all">Rut de Cliente</td>
+                        <td data-hide="all">Correo de Cliente</td>
+                        <td data-hide="all">Teléfono de Cliente</td>
+                        <td>Estatus</td>
+                        <td>Nombres de Usuario</td>
+                        <td data-hide="all">Rut de Usuario</td>
+                        <td data-hide="all">Correo de Usuario</td>
+                        <td data-hide="all">Teléfono de Usuario</td>
+                        <td class="text-right"></td>
+                    </tr>
+                    </tfoot>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    
+
+    var table = $('.saleshistory').DataTable({
+        pageLength: 10,
+        responsive: true,
+        dom: '<"html5buttons"B>lTfgitp',
+        buttons: [
+            { extend: 'copy'},
+            {extend: 'csv'},
+            {extend: 'excel', title: 'ExampleFile'},
+            {extend: 'pdf', title: 'ExampleFile'},
+
+            {extend: 'print',
+                customize: function (win){
+                    $(win.document.body).addClass('white-bg');
+                    $(win.document.body).css('font-size', '10px');
+
+                    $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                }
+            }
+        ]
+
+    });
+
+    $('#DataTables_Table_0_filter label').html('<label>Buscar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>');
+
+    $('.dataTables_filter input').on( 'keyup', function () {
+        table.search( this.value ).draw();
+    } );
+
+    // $('.footable').footable();
+
+    $('.table-filter').on('change', function(){
+       table.search(this.value).draw();   
+    });
+
+});
+
+    
+
+
+
+</script>
+
+<% end %>

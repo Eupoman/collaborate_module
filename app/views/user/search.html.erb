@@ -1,0 +1,320 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Buscador de usuarios</h2>
+
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<%= url_for :controller => 'user', :action => 'index' %>">Inicio</a>
+            </li>
+            <li class="active">
+                <strong><a>Buscador de usuarios</a></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox-title">
+        <h5>Lista de Usuarios</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <p>
+        Seleccione el Tipo de Usuario: 
+        <select id="table-filter" class="form-control">
+            <option value="">Todas</option> 
+            <option>Cliente</option>
+            <option>CorredorA</option>
+            <option>CorredorB</option>
+            <option>Auditor</option>
+            <option>Vendedor Senior</option>
+            <option>Administrador del sistema</option>
+            <option>Ejecutivo</option>
+            <option>Automotora</option>
+        </select>
+        </p>
+        <table class="footable table table-striped table-bordered table-hover dataTables-example">
+            <thead>
+                <tr>
+                    <th data-toggle="true">RUT</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Correo</th>
+                    <th>Sexo</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Tipo de Usuario</th>
+                    <th>Sucursal</th>
+                    <th data-hide="all">Número de Telefono</th>
+                    <th data-hide="all">Región</th>
+                    <th data-hide="all">Comuna</th>
+                    <th data-hide="all">Dirección</th>
+                    <th data-hide="all">Ocupación</th>
+                    <th data-hide="all">Asignar Compañias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gradeA">
+                    <td>8,098,525-8</td>
+                    <td>victoria</td>
+                    <td>Felipe</td>
+                    <td class="center">231</td>
+                    <td>Masculino</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Cliente</td>
+                    <td>Región Metropolitana de Santiago</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>ANTOFAGASTA</td>
+                    <td>Taltal</td>
+                    <td>Calle Albania, 7227</td>
+                    <td>Profesionales</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>8,465,557-0</td>
+                    <td>victoria</td>
+                    <td>Franco</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Vendedor Senior</td>
+                    <td>Región de Tarapacá</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>COQUIMBO</td>
+                    <td>Salamanca</td>
+                    <td>Calle Mosqueto, 478 - Piso 2</td>
+                    <td>Estudiantes</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>8,465,557-0</td>
+                    <td>Daniela</td>
+                    <td>Franco</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Administrador del sistema</td>
+                    <td>Región de Antofagasta</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>COQUIMBO</td>
+                    <td>Salamanca</td>
+                    <td>Calle Mosqueto, 478 - Piso 2</td>
+                    <td>Estudiantes</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>8,654,162-9</td>
+                    <td>Daniela</td>
+                    <td>Nico</td>
+                    <td class="center">231</td>
+                    <td>Masculino</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Cliente</td>
+                    <td>Región Metropolitana de Santiago</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>ANTOFAGASTA</td>
+                    <td>Taltal</td>
+                    <td>Calle Los Quillayes, 10757 - Parad.33</td>
+                    <td>Dueñas de casa</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>8,654,162-9</td>
+                    <td>Isabella</td>
+                    <td>Nico</td>
+                    <td class="center">231</td>
+                    <td>Masculino</td>
+                    <td class="center">2017.11.29</td>
+                    <td>CorredorA</td>
+                    <td>Región Metropolitana de Santiago</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>ANTOFAGASTA</td>
+                    <td>Taltal</td>
+                    <td>Calle Los Quillayes, 10757 - Parad.33</td>
+                    <td>Dueñas de casa</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>32,041,733-3</td>
+                    <td>Camila</td>
+                    <td>Josefina</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>CorredorB</td>
+                    <td>Región de Tarapacá</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>ANTOFAGASTA</td>
+                    <td>Taltal</td>
+                    <td>Calle Los Gomeros, 1721</td>
+                    <td>Dueñas de casa</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>8,098,525-8</td>
+                    <td>Camila</td>
+                    <td>Josefina</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Auditor</td>
+                    <td>Región de Tarapacá</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>COQUIMBO</td>
+                    <td>Salamanca</td>
+                    <td>Calle Los Gomeros, 1721</td>
+                    <td>Independiente</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>5,833,936-9</td>
+                    <td>Rocío</td>
+                    <td>Alexis</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Administrador del sistema</td>
+                    <td>Región de Antofagasta</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>DEL MAULE</td>
+                    <td>Molina</td>
+                    <td>Calle Los Gomeros, 1721</td>
+                    <td>Independiente</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>5,833,936-9</td>
+                    <td>Rocío</td>
+                    <td>Alexis</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Ejecutivo</td>
+                    <td>Región de Antofagasta</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>DEL MAULE</td>
+                    <td>Molina</td>
+                    <td>Calle Francisco Chacón, 735 - Local 31</td>
+                    <td>Profesionales</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>7,176,894-5</td>
+                    <td>Caro</td>
+                    <td>Vicente</td>
+                    <td class="center">231</td>
+                    <td>Hembra</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Automotora</td>
+                    <td>Región de Atacama</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>DEL MAULE</td>
+                    <td>Molina</td>
+                    <td>Calle Paseo Ahumada 370 of. 513, Santiago</td>
+                    <td>Profesionales</td>
+                    <td>Liberty</td>
+                </tr>
+                <tr class="gradeA">
+                    <td>7,176,894-5</td>
+                    <td>Caro</td>
+                    <td>Felipe</td>
+                    <td class="center">231</td>
+                    <td>Masculino</td>
+                    <td class="center">2017.11.29</td>
+                    <td>Automotora</td>
+                    <td>Región de Atacama</td>
+                    <td>(56-2) 3141036 </td>
+                    <td>DE LOS LAGOS</td>
+                    <td>Camarones</td>
+                    <td>Calle Paseo Ahumada 370 of. 513, Santiago</td>
+                    <td>Profesionales</td>
+                    <td>Liberty</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>RUT</td>
+                    <td>Apellido Paterno</td>
+                    <td>Apellido Materno</td>
+                    <td>Correo</td>
+                    <td>Sexo</td>
+                    <td>Fecha de Nacimiento</td>
+                    <td>Tipo de Usuario</td>
+                    <td>Sucursal</td>
+                    <td data-hide="all">Número de Telefono</td>
+                    <td data-hide="all">Región</td>
+                    <td data-hide="all">Comuna</td>
+                    <td data-hide="all">Dirección</td>
+                    <td data-hide="all">Ocupación</td>
+                    <td data-hide="all">Asignar Compañias</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+
+    $('.footable').footable();
+
+    var table = $('.dataTables-example').DataTable({
+        pageLength: 25,
+        responsive: true,
+        dom: '<"html5buttons"B>lTfgitp',
+        buttons: [
+            { extend: 'copy'},
+            {extend: 'csv'},
+            {extend: 'excel', title: 'Espacio Seguros'},
+            {extend: 'pdf', title: 'Espacio Seguros',orientation: 'landscape'},
+
+            {extend: 'print',
+                customize: function (win){
+                    $(win.document.body).addClass('white-bg');
+                    $(win.document.body).css('font-size', '10px');
+
+                    $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                }
+            }
+        ]
+
+    });
+
+
+    $('#DataTables_Table_0_filter label').html('<label>Buscar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>');
+
+    $('.dataTables_filter input').on( 'keyup', function () {
+        table.search( this.value ).draw();
+    } );
+
+    $('#table-filter').on('change', function(){
+       table.search(this.value).draw();   
+    });
+
+});
+
+</script>
